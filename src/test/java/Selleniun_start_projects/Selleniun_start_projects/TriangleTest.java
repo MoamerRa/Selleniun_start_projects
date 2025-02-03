@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertEquals;
 
 
+/*Moamer Rabea - 207661836*/
 
 public class TriangleTest
 {
@@ -28,6 +29,54 @@ public class TriangleTest
 	@Test
 	public void TriangleTypeTest01() 
 	{
+		browser.findElement(By.id("side1")).sendKeys("5");
+		browser.findElement(By.id("side2")).sendKeys("1");
+		browser.findElement(By.id("side3")).sendKeys("1");
+		WebElement checkButton = browser.findElement(By.id("identify-triangle-action"));
+		checkButton.click();
+		WebElement resultElement = browser.findElement(By.id("triangle-type"));
+		String actualResult = resultElement.getText();
+
+		String expectedResult = "Error: Not a Triangle";
+		assertEquals(expectedResult, actualResult);
+		System.out.println("Triangle Type1: " + actualResult);
+	}
+
+	@Test
+	public void TriangleTypeTest02() 
+	{
+		browser.findElement(By.id("side1")).sendKeys("6");
+		browser.findElement(By.id("side2")).sendKeys("16");
+		browser.findElement(By.id("side3")).sendKeys("4");
+		WebElement checkButton = browser.findElement(By.id("identify-triangle-action"));
+		checkButton.click();
+		WebElement resultElement = browser.findElement(By.id("triangle-type"));
+		String actualResult = resultElement.getText();
+
+		String expectedResult = "Error: Not a Triangle";
+		assertEquals(expectedResult, actualResult);
+		System.out.println("Triangle Type1: " + actualResult);
+	}
+
+	@Test
+	public void TriangleTypeTest03() 
+	{
+		browser.findElement(By.id("side1")).sendKeys("5");
+		browser.findElement(By.id("side2")).sendKeys("7");
+		browser.findElement(By.id("side3")).sendKeys("13");
+		WebElement checkButton = browser.findElement(By.id("identify-triangle-action"));
+		checkButton.click();
+		WebElement resultElement = browser.findElement(By.id("triangle-type"));
+		String actualResult = resultElement.getText();
+
+		String expectedResult = "Error: Not a Triangle";
+		assertEquals(expectedResult, actualResult);
+		System.out.println("Triangle Type1: " + actualResult);
+	}
+
+	@Test
+	public void TriangleTypeTest04() 
+	{
 		browser.findElement(By.id("side1")).sendKeys("6");
 		browser.findElement(By.id("side2")).sendKeys("6");
 		browser.findElement(By.id("side3")).sendKeys("6");
@@ -40,13 +89,29 @@ public class TriangleTest
 		assertEquals(expectedResult, actualResult);
 		System.out.println("Triangle Type1: " + actualResult);
 	}
+
+	@Test
+	public void TriangleTypeTest05() 
+	{
+		browser.findElement(By.id("side1")).sendKeys("8");
+		browser.findElement(By.id("side2")).sendKeys("8");
+		browser.findElement(By.id("side3")).sendKeys("6");
+		WebElement checkButton = browser.findElement(By.id("identify-triangle-action"));
+		checkButton.click();
+		WebElement resultElement = browser.findElement(By.id("triangle-type"));
+		String actualResult = resultElement.getText();
+
+		String expectedResult = "Isosceles";
+		assertEquals(expectedResult, actualResult);
+		System.out.println("Triangle Type1: " + actualResult);
+	}
 	
 	@Test
-	public void TriangleTypeTest02() 
+	public void TriangleTypeTest06() 
 	{
 		browser.findElement(By.id("side1")).sendKeys("8");
 		browser.findElement(By.id("side2")).sendKeys("6");
-		browser.findElement(By.id("side3")).sendKeys("6");
+		browser.findElement(By.id("side3")).sendKeys("8");
 		WebElement checkButton = browser.findElement(By.id("identify-triangle-action"));
 		checkButton.click();
 		WebElement resultElement = browser.findElement(By.id("triangle-type"));
@@ -58,33 +123,33 @@ public class TriangleTest
 	}
 	
 	@Test
-	public void TriangleTypeTest03()
+	public void TriangleTypeTest07()
 	{
 		browser.findElement(By.id("side1")).sendKeys("6");
 		browser.findElement(By.id("side2")).sendKeys("8");
-		browser.findElement(By.id("side3")).sendKeys("10");
+		browser.findElement(By.id("side3")).sendKeys("8");
+		WebElement checkButton = browser.findElement(By.id("identify-triangle-action"));
+		checkButton.click();
+		WebElement resultElement = browser.findElement(By.id("triangle-type"));
+		String actualResult = resultElement.getText();
+
+		String expectedResult = "Isosceles";
+		assertEquals(expectedResult, actualResult);
+		System.out.println("Triangle Type3: " + actualResult);
+	}
+	
+	@Test
+	public void TriangleTypeTest08() 
+	{
+		browser.findElement(By.id("side1")).sendKeys("3");
+		browser.findElement(By.id("side2")).sendKeys("4");
+		browser.findElement(By.id("side3")).sendKeys("5");
 		WebElement checkButton = browser.findElement(By.id("identify-triangle-action"));
 		checkButton.click();
 		WebElement resultElement = browser.findElement(By.id("triangle-type"));
 		String actualResult = resultElement.getText();
 
 		String expectedResult = "Scalene";
-		assertEquals(expectedResult, actualResult);
-		System.out.println("Triangle Type3: " + actualResult);
-	}
-	
-	@Test
-	public void TriangleTypeTest04() 
-	{
-		browser.findElement(By.id("side1")).sendKeys("1");
-		browser.findElement(By.id("side2")).sendKeys("2");
-		browser.findElement(By.id("side3")).sendKeys("3");
-		WebElement checkButton = browser.findElement(By.id("identify-triangle-action"));
-		checkButton.click();
-		WebElement resultElement = browser.findElement(By.id("triangle-type"));
-		String actualResult = resultElement.getText();
-
-		String expectedResult = "Error: Not a Triangle";
 		assertEquals(expectedResult, actualResult);
 		System.out.println("Triangle Type4: " + actualResult);
 	}

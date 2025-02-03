@@ -1,5 +1,7 @@
 package Selleniun_start_projects.Selleniun_start_projects;
 
+/*Moamer Rabea - 207661836*/
+
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,7 +26,8 @@ public class AppTest
 	static WebDriver  browser;
 
 	@Before
-	public void setup() {
+	public void setup() 
+	{
 
 		System.setProperty("webdriver.gecko.driver","C:\\Users\\PC\\OneDrive\\שולחן העבודה\\geckodriver.exe");
 		browser = new FirefoxDriver();
